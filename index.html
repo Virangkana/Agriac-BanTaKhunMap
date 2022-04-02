@@ -47,13 +47,13 @@
   var light = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
     attribution: '&copy; <a href="https://leafletjs.com/">Leaflet</a>, &copy; <a href="https://www.linkedin.com/in/virangkana-sampun-9b1116203/">VIRANGKANA</a>'
   }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(light, 'แผนที่ดาวเทียม');
+  controlLayers.addBaseLayer(light, 'Satellite');
 
   /* Stamen colored terrain basemap tiles with labels */
   var terrain = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
   }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(terrain, 'แผนที่ฐาน');
+  controlLayers.addBaseLayer(terrain, 'map');
     
 
      
