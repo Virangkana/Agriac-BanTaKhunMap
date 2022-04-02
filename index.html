@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( null, null, null, {
+  var controlLayers = L.control.layers( null, null, {
     position: "topright",
     collapsed: false
   }).addTo(map);
@@ -59,13 +59,7 @@
 
 
     
-var MV_SPARCEL = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", {
-    layers: 'MV_SPARCEL',
-    format: 'image/png',
-    transparent: true,
-    attribution '' 
-}).addTo(map);
-    controlLayers.addBaseLayer(MV_SPARCEL, 'map');
+
 
      
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
