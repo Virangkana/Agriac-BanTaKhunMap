@@ -55,7 +55,7 @@
   }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(terrain, 'map');
     
-var MV = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
+var MV_SPARCEL = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
     layers: 'MV_SPARCEL',
     format: 'image/png',
     transparent: true,
