@@ -76,6 +76,22 @@
      
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
+    // Icon options
+         var iconOptions = {
+            iconUrl: 'logo.png',
+            iconSize: [40, 40]
+         }
+
+         // Creating a custom icon
+         var customIcon = L.icon(iconOptions);
+
+         // Specify marker options
+         var markerOptions = {
+            title: "GIS Tutorials",
+            clickable: true,
+            draggable: true,
+            icon: customIcon
+         }
   // Read markers data from data.csv
   $.get('./location นส.4จ - Sheet2 (1).csv', function(csvString) {
 
