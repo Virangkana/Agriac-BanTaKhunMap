@@ -60,14 +60,10 @@
     var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
             layers: 'MV_SPARCEL',
             format: 'image/png',
-            uppercase: true,
+           
             transparent: true,
-            continuousWorld : true,
-            tiled: true,
-            version : "1.3.0" ,
-            info_format: 'text/html',
-            opacity: 1,
-            identify: false,
+           
+          
             attribution: '',
       parcel.addTo(map);
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
