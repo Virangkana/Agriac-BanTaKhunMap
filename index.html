@@ -58,8 +58,8 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-    var parcel = L.WMS.layer("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
-           
+    var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
+            layers: 'MV_SPARCEL',
             format: 'image/png',
             uppercase: true,
             transparent: true,
