@@ -79,7 +79,8 @@
         map.addLayer(layer__1);
         map.createPane('pane__2');
         map.getPane('pane__2').style.zIndex = 402;
-        var layer__2 = L.WMS.layer("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
+        var layer__2 = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
+            layers: 'MV_SPARCEL',
             pane: 'pane__2',
             format: 'image/png',
             uppercase: true,
