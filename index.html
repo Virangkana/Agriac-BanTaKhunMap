@@ -37,29 +37,50 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( terrain, light, parcel, {
+  var controlLayers = L.control.layers( layer__0, layer__1,layer__2 {
     position: "topright",
-    collapsed: true
+    collapsed: true ,
   }).addTo(map);
  
   
  
       /* Stamen colored terrain basemap tiles with labels */
-  var terrain = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     map.createPane('pane__0');
+        map.getPane('pane__0').style.zIndex = 400;
+        var layer__0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           pane: 'pane__0',
+            opacity: 1.0,
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-  }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(terrain, 'map');
+            minZoom: 2,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  controlLayers.addBaseLayer(layer__0, 'map');
     
     // display Carto basemap tiles with light features and labels//
-    
-  var light = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+   layer__0;
+        map.addLayer(layer__0);
+        map.createPane('pane__1');
+        map.getPane('pane__1').style.zIndex = 401;
+        var layer__1 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+          pane: 'pane__1',
+            opacity: 1.0,
     attribution: '&copy; <a href="https://leafletjs.com/">Leaflet</a>, &copy; <a href="https://www.linkedin.com/in/virangkana-sampun-9b1116203/">VIRANGKANA</a>'
+           minZoom: 2,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
   }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(light, 'Satellite');
+  controlLayers.addBaseLayer(layer__1, 'Satellite');
 
 
-    var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
-            layers: 'MV_SPARCEL',
+   layer__1;
+        map.addLayer(layer__1);
+        map.createPane('pane__2');
+        map.getPane('pane__2').style.zIndex = 402;
+        var layer__2 = L.WMS.layer("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
+            pane: 'pane__2',
             format: 'image/png',
             uppercase: true,
             transparent: true,
@@ -70,7 +91,7 @@
             identify: false,
             attribution: '',
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
+  controlLayers.addBaseLayer(layer__2, 'ข้อมูลแปลงที่ดิน');
 
 
      
