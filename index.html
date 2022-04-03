@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( terrain, light, PARCEL, {
+  var controlLayers = L.control.layers( terrain, light, parcel, {
     position: "topright",
     collapsed: true
   }).addTo(map);
@@ -58,13 +58,13 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-    var PARCEL = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", {
+    var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", {
     layers: 'MV_SPARCEL',
     format: 'image/png',
     transparent: true,
     attribution: ''
       }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(PARCEL, 'ข้อมูลแปลงที่ดิน');
+  controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
 
 
      
