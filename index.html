@@ -75,25 +75,7 @@
   controlLayers.addBaseLayer(layer__1, 'Satellite');
 
 
-   layer__1;
-        map.addLayer(layer__1);
-        map.createPane('pane__2');
-        map.getPane('pane__2').style.zIndex = 402;
-        var layer__2 = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", {
-            layers: 'MV_SPARCEL',
-            pane: 'pane__2',
-            format: 'image/png',
-            uppercase: true,
-            transparent: true,
-            continuousWorld : true,
-            tiled: true,
-            info_format: 'text/html',
-            opacity: 1,
-            identify: false,
-            attribution: '',
-        }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(layer__2, 'ข้อมูลแปลงที่ดิน');
-
+   
 
      
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
