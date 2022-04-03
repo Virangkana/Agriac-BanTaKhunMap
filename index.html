@@ -91,13 +91,13 @@
 
       var marker = L.marker([row.lat, row.long], {
         opacity: 1
-      }).bindPopup(row.Name);
+      }).bindPopup(row.Name, row.Surname);
       
       marker.addTo(map);
     }
 
   });
-
+ 
   map.attributionControl.setPrefix(
     'View <a href="https://github.com/" target="_blank">code on GitHub</a>'
   );
