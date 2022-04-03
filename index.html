@@ -60,8 +60,8 @@
 
     var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", {
     layers: 'MV_SPARCEL',
-    format: 'image/png',
-    transparent: true,
+    format: 'image/jpg',
+    transparent: false,
     attribution: ''
       }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
