@@ -57,13 +57,11 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-    var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
-            layers: 'MV_SPARCEL',
-            format: 'image/png',
-            transparent: true,
-           attribution: '',
      
-        }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  addWMSTiles("http://110.164.49.72:8081/geoserver/WMSDOL/wms", 
+  layers = "MV_SPARCEL", 
+  options = WMSTileOptions(token = "public", format = "image/png", transparent = TRUE),
+  attribution = '') // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
 
 
