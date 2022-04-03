@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( terrain, light, {
+  var controlLayers = L.control.layers( terrain, light, PARCEL {
     position: "topright",
     collapsed: true
   }).addTo(map);
@@ -62,8 +62,9 @@
     layers: 'MV_SPARCEL',
     format: 'image/png',
     transparent: true,
-    attribution: "dol"
-});
+    attribution: ''
+      }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  controlLayers.addBaseLayer(PARCEL, 'ข้อมูลแปลงที่ดิน');
 
 
      
