@@ -58,8 +58,8 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-    var nexrad = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", "MV_SPARCEL", {
-    layers: 'nexrad-n0r-900913',
+    var MV_SPARCEL = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms?", "MV_SPARCEL", {
+    layers: 'MV_SPARCEL',
     format: 'image/png',
     transparent: true,
     attribution: "Weather data © 2012 IEM Nexrad"
