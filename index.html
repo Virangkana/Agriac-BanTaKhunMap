@@ -58,16 +58,13 @@
 
 
      
-   var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/ows?SERVICE=WMS&", {
-            layers: 'MV_SPARCEL',
+   var parcel = L.tileLayer.wms("http://gservices.gistda.or.th/geoserver/wms", {
+            layers: 'L02_Thaichote_GISTDA_2m:L02_ThaichoteNorth_GISTDA_2m_pm',
             format: 'image/png',
-            uppercase: true,
+           
             transparent: true,
-            continuousWorld : true,
-            tiled: true,
-            info_format: 'text/html',
-            opacity: 1,
-            identify: false,
+         
+           
             attribution: '',
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
   controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
