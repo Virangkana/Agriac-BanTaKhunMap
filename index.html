@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( null, null, {
+  var controlLayers = L.control.layers( terrain, light, {
     position: "topright",
     collapsed: true
   }).addTo(map);
