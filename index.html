@@ -58,8 +58,10 @@
 
 
      
-   var parcel =  L.tileLayer('https://lddonfarm.ldd.go.th/arcgis/rest/services/LDDFarm/ALRO/MapServer/0', {
-          
+   var parcel =  L.tileLayer.wms('https://lddonfarm.ldd.go.th/arcgis/rest/services/LDDFarm/ALRO/MapServer', {
+           layers:'0',
+            format: 'image/png',
+            transparent: true,
            
             attribution: '',
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
