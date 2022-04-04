@@ -87,8 +87,7 @@
     // For each row, columns `lat`, `long` ,  `Name` are required
     for (var i in data) {
       var row = data[i];
-      var detail = "<dl><dt>row.Name</dt>"
-           + "<dd>" + title + "</dd>";
+      var detail = row.Name  ;
         
 
       var marker = L.marker([row.lat, row.long], {
