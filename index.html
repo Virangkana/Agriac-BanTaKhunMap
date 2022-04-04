@@ -78,32 +78,21 @@
 
    
   // Read markers data from data.csv
-  $.get('./location นส.4จ - Sheet2 (1).csv', function(csvString) {
+    $.get('./location นส.4จ - Sheet2 (1).csv', function(csvString) {
 
     // Use PapaParse to convert string to array of objects
     var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
- // For each row in data, create a marker and add it to the map
+    // For each row in data, create a marker and add it to the map
     // For each row, columns `lat`, `long` ,  `Name` are required
-    var LeafIcon = L.Icon.extend({
-    options: {
-        iconSize: [20, 30],
-      iconAnchor: [18, 18],
-      popupAnchor: [0, -10],
-      shadowSize: [0, 0],
-      shadowAnchor: [10, 10]
-    }
-});
-    var greenIcon = new LeafIcon({
-    iconUrl: 'https://unpkg.com/leaflet@1.0.3/dist/images/marker-icon.png',
-  
-})
-    
-    
     for (var i in data) {
       var row = data[i];
 
-      var marker = L.marker([row.lat, row.long],{icon: greenIcon}).addTo(map);
+      var marker = L.marker([row.lat, row.long], {
+        opacity: 1
+      }).bindPopup(row.Name);
+      
+      marker.addTo(map);
     }
 
   });
