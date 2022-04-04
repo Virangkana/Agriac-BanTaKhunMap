@@ -60,6 +60,7 @@
      
    var parcel =  L.tileLayer.wms('https://lddonfarm.ldd.go.th/arcgis/rest/services/LDDFarm/ALRO/MapServer', {
            layers:'0',
+             srs : 'EPSG:3857' ,
             format: 'image/png',
             transparent: true,
            
