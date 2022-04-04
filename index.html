@@ -58,12 +58,8 @@
 
 
      
-   var parcel = L.tileLayer.wms("http://110.164.49.72:8081/geoserver/WMSDOL/wms", {
-            layers: 'MV_SPARCEL',
-            format: 'image/png',
-           
-            transparent: true,
-         
+   var parcel =  L.tileLayer('https://lddonfarm.ldd.go.th/arcgis/rest/services/LDDFarm/ALRO/MapServer/0', {
+          
            
             attribution: '',
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
