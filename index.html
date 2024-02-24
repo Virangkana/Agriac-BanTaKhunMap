@@ -22,7 +22,7 @@
 </head>
 <body>
    <!-- Display the map and title with HTML division tags  -->
- <div id="map-title">Agriac-Ban Takhun</div>
+ <div id="map-title">TRAZTRU</div>
   <div id="map"></div>
   
   <!-- Insert Javascript (.js) code to create the map -->
@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( terrain, light, {
+  var controlLayers = L.control.layers( terrain, light, Global Forest Watch, {
     position: "topright",
     collapsed: true ,
   }).addTo(map);
@@ -57,7 +57,10 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-
+  var globalforest2020 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+    attribution: '&copy; <a href="https://leafletjs.com/">Leaflet</a>, &copy; <a href="https://www.linkedin.com/in/virangkana-sampun-9b1116203/">VIRANGKANA</a>'
+  }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  controlLayers.addBaseLayer(light, 'Global Forest 2020');
 
 
 
