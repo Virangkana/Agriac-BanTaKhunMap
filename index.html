@@ -37,7 +37,7 @@
   });
 
   /* Control panel to display map layers */
-  var controlLayers = L.control.layers( terrain, light, parcel, {
+  var controlLayers = L.control.layers( terrain, light, {
     position: "topright",
     collapsed: true ,
   }).addTo(map);
@@ -57,21 +57,7 @@
   controlLayers.addBaseLayer(light, 'Satellite');
 
 
-     
-   var parcel =  L.WMS.layer("https://ies-ows.jrc.ec.europa.eu/iforce/gfc2020/wms.py", "gfc2020", {
-            pane: 'pane_Globalforestcover2020_2',
-            format: 'image/png',
-            uppercase: true,
-            transparent: true,
-            continuousWorld : true,
-            tiled: true,
-            info_format: 'text/html',
-            opacity: 1,
-            attribution: '',
-        });
-        
-        }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(parcel, 'global forest watch');
+
 
 
 
