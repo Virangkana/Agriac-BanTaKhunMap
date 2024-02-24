@@ -61,12 +61,16 @@
    var parcel =  L.tileLayer.wms("https://ies-ows.jrc.ec.europa.eu/iforce/gfc2020/wms.py", {
            layers:'0',
            
-            format: 'image/png',
+             format: 'image/png',
+            uppercase: true,
             transparent: true,
-           
+            continuousWorld : true,
+            tiled: true,
+            info_format: 'text/html',
+            opacity: 1,
             attribution: '',
         }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  controlLayers.addBaseLayer(parcel, 'ข้อมูลแปลงที่ดิน');
+  controlLayers.addBaseLayer(parcel, 'global forest watch');
 
 
 
